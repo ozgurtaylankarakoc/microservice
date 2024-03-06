@@ -191,7 +191,7 @@ resource "aws_instance" "worker-2" {
     instance_type = "t3a.medium"
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
-    subnet_id = "ssubnet-0d3d123ab91544fa4"  # select own subnet_id of us-east-1a
+    subnet_id = "subnet-0d3d123ab91544fa4"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-2"
